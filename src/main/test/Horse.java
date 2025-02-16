@@ -34,7 +34,6 @@ class HorseTest {
         });
     }
 
-
     @Test
     void horseConstructParamIsBlankThrText() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
@@ -52,7 +51,6 @@ class HorseTest {
 
 
     //----Tests for class methods - getName(), getSpeed(), getDistance(), move()
-    @DisplayName("getName")
     @Test
     void getName() {
         horse1 = new Horse("Alice", 45, 100);
