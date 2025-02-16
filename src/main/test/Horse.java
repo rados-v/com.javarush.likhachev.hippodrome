@@ -1,50 +1,81 @@
-import static java.util.Objects.isNull;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
-public class Horse {
 
-    private final String name;
-    private final double speed;
-    private double distance;
+import static org.junit.jupiter.api.Assertions.*;
 
-    public Horse(String name, double speed, double distance) {
-        if (isNull(name)) {
-            throw new IllegalArgumentException("Name cannot be null.");
-        } else if (name.isBlank()) {
-            throw new IllegalArgumentException("Name cannot be blank.");
-        }
-        if (speed < 0) {
-            throw new IllegalArgumentException("Speed cannot be negative.");
-        }
-        if (distance < 0) {
-            throw new IllegalArgumentException("Distance cannot be negative.");
-        }
+class HorseTest {
+    Horse horse1;
 
-        this.name = name;
-        this.speed = speed;
-        this.distance = distance;
+
+    //----Tests for the constructor
+    @Test
+    void horseConstrParamIsNullThrEx() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            horse1 = new Horse(null, 45, 100);
+        });
     }
 
-    public Horse(String name, double speed) {
-        this(name, speed, 0);
+    @Test
+    void horseConstructParamIsNullThrExText() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            horse1 = new Horse(null, 45, 100);
+        });
+        assertEquals("Name cannot be null.", exception.getMessage());
     }
 
-    public String getName() {
-        return name;
+    @ParameterizedTest
+    @ValueSource(strings = {"", " "})
+    void horseConstrParamIsBlankThrEx(String name) {
+        assertThrows(IllegalArgumentException.class, () -> {
+            horse1 = new Horse(name, 45, 100);
+        });
     }
 
-    public double getSpeed() {
-        return speed;
+
+    @Test
+    void horseConstructParamIsBlankThrText() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+            horse1 = new Horse("", 45, 100);
+        });
+        assertEquals("Name cannot be blank.", exception.getMessage());
     }
 
-    public double getDistance() {
-        return distance;
+    @Test
+    void horseConstructParam2IsNegNumb() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            horse1 = new Horse("Alice", -10, 100);
+        });
     }
 
-    public void move() {
-        distance += speed * getRandomDouble(0.2, 0.9);
+
+    //----Tests for class methods - getName(), getSpeed(), getDistance(), move()
+    @DisplayName("getName")
+    @Test
+    void getName() {
+        horse1 = new Horse("Alice", 45, 100);
+        assertInstanceOf(String.class, horse1.getName());
     }
 
-    public static double getRandomDouble(double min, double max) {
-        return (Math.random() * (max - min)) + min;
+    @Test
+    void getSpeed() {
+        horse1 = new Horse("Alice", 45, 100);
+        assertInstanceOf(Double.class, horse1.getSpeed());
     }
+
+    @Test
+    void getDistance() {
+        horse1 = new Horse("Alice", 45);
+        assertInstanceOf(Double.class, horse1.getDistance());
+        assertEquals(0.0, horse1.getDistance());
+    }
+
+//    @Test
+//    public void move() {
+//
+//    }
+
+
 }
