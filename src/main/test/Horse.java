@@ -49,6 +49,29 @@ class HorseTest {
         });
     }
 
+    @Test
+    void horseConstructParam2IsNegNumbThrExText() {
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+           horse1 = new Horse("Alice", -10, 100);
+        });
+        assertEquals("Speed cannot be negative.", exception.getMessage());
+    }
+
+   @Test
+   void horseConstructParam3IsNegNumb() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            horse1 = new Horse("Alice", 45, -80);
+        });
+   }
+
+   @Test
+   void horseConstructParam3IsNegNumbThrExText() {
+       IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
+           horse1 = new Horse("Alice", 45, -80);
+       });
+       assertEquals("Distance cannot be negative.", exception.getMessage());
+   }
+
 
     //----Tests for class methods - getName(), getSpeed(), getDistance(), move()
     @Test
