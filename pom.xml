@@ -27,6 +27,13 @@
             <version>5.11.4</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>4.6.1</version> <!-- Убедитесь, что версия актуальна -->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>

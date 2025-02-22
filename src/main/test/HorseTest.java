@@ -1,3 +1,5 @@
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -7,67 +9,66 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 
 class HorseTest {
-    Horse horse1;
-
+    Horse horseTest;
 
     //----Tests for the constructor
     @Test
-    void horseConstrParamIsNullThrEx() {
+    void testHorseConstructorParamIsNullThrEx() {
         assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse(null, 45, 100);
+            horseTest = new Horse(null, 45, 100);
         });
     }
 
     @Test
-    void horseConstructParamIsNullThrExText() {
+    void testHorseConstructorParamIsNullThrExText() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse(null, 45, 100);
+            horseTest = new Horse(null, 45, 100);
         });
         assertEquals("Name cannot be null.", exception.getMessage());
     }
 
     @ParameterizedTest
     @ValueSource(strings = {"", " "})
-    void horseConstrParamIsBlankThrEx(String name) {
+    void testHorseConstructorParamIsBlankThrEx(String name) {
         assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse(name, 45, 100);
+            horseTest = new Horse(name, 45, 100);
         });
     }
 
     @Test
-    void horseConstructParamIsBlankThrText() {
+    void testHorseConstructorParamIsBlankThrText() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse("", 45, 100);
+            horseTest = new Horse("", 45, 100);
         });
         assertEquals("Name cannot be blank.", exception.getMessage());
     }
 
     @Test
-    void horseConstructParam2IsNegNumb() {
+    void testHorseConstructorParam2IsNegNumb() {
         assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse("Alice", -10, 100);
+            horseTest = new Horse("Alice", -10, 100);
         });
     }
 
     @Test
-    void horseConstructParam2IsNegNumbThrExText() {
+    void testHorseConstructorParam2IsNegNumbThrExText() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse("Alice", -10, 100);
+            horseTest = new Horse("Alice", -10, 100);
         });
         assertEquals("Speed cannot be negative.", exception.getMessage());
     }
 
     @Test
-    void horseConstructParam3IsNegNumb() {
+    void testHorseConstructorParam3IsNegNumb() {
         assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse("Alice", 45, -80);
+            horseTest = new Horse("Alice", 45, -80);
         });
     }
 
     @Test
-    void horseConstructParam3IsNegNumbThrExText() {
+    void testHorseConstructorParam3IsNegNumbThrExText() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            horse1 = new Horse("Alice", 45, -80);
+            horseTest = new Horse("Alice", 45, -80);
         });
         assertEquals("Distance cannot be negative.", exception.getMessage());
     }
@@ -75,22 +76,22 @@ class HorseTest {
 
     //----Tests for class methods - getName(), getSpeed(), getDistance(), move()
     @Test
-    void getName() {
-        horse1 = new Horse("Alice", 45, 100);
-        assertInstanceOf(String.class, horse1.getName());
+    void testHorseGetName() {
+        horseTest = new Horse("Alice", 45, 100);
+        assertInstanceOf(String.class, horseTest.getName());
     }
 
     @Test
-    void getSpeed() {
-        horse1 = new Horse("Alice", 45, 100);
-        assertInstanceOf(Double.class, horse1.getSpeed());
+    void testHorseGetSpeed() {
+        horseTest = new Horse("Alice", 45, 100);
+        assertInstanceOf(Double.class, horseTest.getSpeed());
     }
 
     @Test
-    void getDistance() {
-        horse1 = new Horse("Alice", 45);
-        assertInstanceOf(Double.class, horse1.getDistance());
-        assertEquals(0.0, horse1.getDistance());
+    void testHorseGetDistance() {
+        horseTest = new Horse("Alice", 45);
+        assertInstanceOf(Double.class, horseTest.getDistance());
+        assertEquals(0.0, horseTest.getDistance());
     }
 
 //    @Test
