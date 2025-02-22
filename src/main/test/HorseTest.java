@@ -7,12 +7,12 @@ import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class HorseTest {
+    
     Horse horseTest;
-
+    
     //----Tests for the constructor
     @Test
     void testHorseConstructorParamIsNullThrEx() {
@@ -75,7 +75,7 @@ class HorseTest {
         assertEquals("Distance cannot be negative.", exception.getMessage());
     }
 
-
+    
     //----Tests for class methods - getName(), getSpeed(), getDistance(), move()
     @Test
     void testHorseGetName() {
