@@ -8,3 +8,56 @@
 2025-02-22 21:39:20,474 DEBUG Hippodrome: Создание Hippodrome, лошадей [7]
 2025-02-22 21:39:20,475 INFO Main: Начало скачек. Количество участников: 7
 2025-02-22 21:39:20,499 INFO Main: Окончание скачек. Победитель: Cherry
+2025-02-22 22:15:27,591 DEBUG Horse: Создание Horse, имя [Bucephalus] скорость [2.4]
+2025-02-22 22:15:27,594 DEBUG Horse: Создание Horse, имя [Ace of Spades] скорость [2.5]
+2025-02-22 22:15:27,595 DEBUG Horse: Создание Horse, имя [Zephyr] скорость [2.6]
+2025-02-22 22:15:27,595 DEBUG Horse: Создание Horse, имя [Blaze] скорость [2.7]
+2025-02-22 22:15:27,595 DEBUG Horse: Создание Horse, имя [Lobster] скорость [2.8]
+2025-02-22 22:15:27,595 DEBUG Horse: Создание Horse, имя [Pegasus] скорость [2.9]
+2025-02-22 22:15:27,595 DEBUG Horse: Создание Horse, имя [Cherry] скорость [3.0]
+2025-02-22 22:15:27,596 DEBUG Hippodrome: Создание Hippodrome, лошадей [7]
+2025-02-22 22:15:27,596 INFO Main: Начало скачек. Количество участников: 7
+2025-02-22 22:15:34,436 DEBUG Horse: Создание Horse, имя [Bucephalus] скорость [2.4]
+2025-02-22 22:15:34,440 DEBUG Horse: Создание Horse, имя [Ace of Spades] скорость [2.5]
+2025-02-22 22:15:34,440 DEBUG Horse: Создание Horse, имя [Zephyr] скорость [2.6]
+2025-02-22 22:15:34,440 DEBUG Horse: Создание Horse, имя [Blaze] скорость [2.7]
+2025-02-22 22:15:34,440 DEBUG Horse: Создание Horse, имя [Lobster] скорость [2.8]
+2025-02-22 22:15:34,440 DEBUG Horse: Создание Horse, имя [Pegasus] скорость [2.9]
+2025-02-22 22:15:34,441 DEBUG Horse: Создание Horse, имя [Cherry] скорость [3.0]
+2025-02-22 22:15:34,442 DEBUG Hippodrome: Создание Hippodrome, лошадей [7]
+2025-02-22 22:15:34,442 INFO Main: Начало скачек. Количество участников: 7
+2025-02-22 22:15:54,502 INFO Main: Окончание скачек. Победитель: Pegasus
+2025-02-22 22:16:55,327 DEBUG Hippodrome: Создание Hippodrome, лошадей [30]
+2025-02-22 22:16:55,405 ERROR Hippodrome: Horses cannot be empty
+2025-02-22 22:16:55,409 DEBUG Hippodrome: Создание Hippodrome, лошадей [30]
+2025-02-22 22:16:55,414 ERROR Hippodrome: Horses list is null
+2025-02-22 22:16:55,418 ERROR Hippodrome: Horses cannot be empty
+2025-02-22 22:16:55,422 ERROR Hippodrome: Horses list is null
+2025-02-22 22:16:55,425 DEBUG Hippodrome: Создание Hippodrome, лошадей [3]
+2025-02-22 22:19:13,076 DEBUG Hippodrome: Создание Hippodrome, лошадей [30]
+2025-02-22 22:19:13,145 ERROR Hippodrome: Horses cannot be empty
+2025-02-22 22:19:13,149 DEBUG Hippodrome: Создание Hippodrome, лошадей [30]
+2025-02-22 22:19:13,154 ERROR Hippodrome: Horses list is null
+2025-02-22 22:19:13,157 ERROR Hippodrome: Horses cannot be empty
+2025-02-22 22:19:13,161 ERROR Hippodrome: Horses list is null
+2025-02-22 22:19:13,164 DEBUG Hippodrome: Создание Hippodrome, лошадей [3]
+2025-02-22 22:19:24,196 ERROR Horse: Name is null
+2025-02-22 22:19:24,247 ERROR Horse: Name cannot be blank.
+2025-02-22 22:19:24,256 ERROR Horse: Name cannot be blank.
+2025-02-22 22:19:24,261 ERROR Horse: Name is null
+2025-02-22 22:19:24,907 ERROR Horse: Distance cannot be negative.
+2025-02-22 22:19:24,912 ERROR Horse: Name cannot be blank.
+2025-02-22 22:19:24,917 ERROR Horse: Speed cannot be negative.
+2025-02-22 22:19:24,936 DEBUG Horse: Создание Horse, имя [Alice] скорость [45.0]
+2025-02-22 22:19:24,940 ERROR Horse: Distance cannot be negative.
+2025-02-22 22:19:24,944 ERROR Horse: Speed cannot be negative.
+2025-02-22 22:19:42,561 DEBUG Horse: Создание Horse, имя [Bucephalus] скорость [2.4]
+2025-02-22 22:19:42,563 DEBUG Horse: Создание Horse, имя [Ace of Spades] скорость [2.5]
+2025-02-22 22:19:42,563 DEBUG Horse: Создание Horse, имя [Zephyr] скорость [2.6]
+2025-02-22 22:19:42,564 DEBUG Horse: Создание Horse, имя [Blaze] скорость [2.7]
+2025-02-22 22:19:42,564 DEBUG Horse: Создание Horse, имя [Lobster] скорость [2.8]
+2025-02-22 22:19:42,564 DEBUG Horse: Создание Horse, имя [Pegasus] скорость [2.9]
+2025-02-22 22:19:42,564 DEBUG Horse: Создание Horse, имя [Cherry] скорость [3.0]
+2025-02-22 22:19:42,565 DEBUG Hippodrome: Создание Hippodrome, лошадей [7]
+2025-02-22 22:19:42,565 INFO Main: Начало скачек. Количество участников: 7
+2025-02-22 22:20:02,632 INFO Main: Окончание скачек. Победитель: Cherry

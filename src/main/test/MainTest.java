@@ -10,8 +10,6 @@ class MainTest {
     @Disabled
     @Test
     void testMethodMainTimeout() {
-        assertTimeout(Duration.ofSeconds(22), () -> {
-            Main.main(new String[] {});
-        });
+        assertTimeout(Duration.ofSeconds(22), () -> Main.main(new String[] {}));
     }
 }

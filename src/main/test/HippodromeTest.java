@@ -15,32 +15,23 @@ class HippodromeTest {
 
     @Test
     void testHippodromeConstructorParamIsNullThrEx() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            hippodromeTest = new Hippodrome(null);
-        });
+        assertThrows(IllegalArgumentException.class, () -> hippodromeTest = new Hippodrome(null));
     }
 
     @Test
     void testHippodromeConstructorParamIsNullThrExText() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            hippodromeTest = new Hippodrome(null);
-        });
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> hippodromeTest = new Hippodrome(null));
         assertEquals("Horses cannot be null.", exception.getMessage());
     }
 
     @Test
     void testHippodromeConstructorParamIsEmptyThrEx() {
-
-        assertThrows(IllegalArgumentException.class, () -> {
-           hippodromeTest = new Hippodrome(new ArrayList<>());
-        });
+        assertThrows(IllegalArgumentException.class, () -> hippodromeTest = new Hippodrome(new ArrayList<>()));
     }
 
     @Test
     void testHippodromeConstructorParamIsEmptyThrExText() {
-        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            hippodromeTest = new Hippodrome(new ArrayList<>());
-        });
+        IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> hippodromeTest = new Hippodrome(new ArrayList<>()));
         assertEquals("Horses cannot be empty.", exception.getMessage());
     }
 
@@ -73,7 +64,7 @@ class HippodromeTest {
        Horse horse1 = new Horse("Alice", 45, 100);
        Horse horse2 = new Horse("Martin", 50, 120);
        Horse horse3 = new Horse("Bob", 55, 150);
-
+       
        Hippodrome hippodrome = new Hippodrome(Arrays.asList(horse1, horse2, horse3));
        assertEquals(horse3, hippodrome.getWinner());
     }
