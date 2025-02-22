@@ -30,7 +30,6 @@ public class Main {
 
         String winnerName = hippodrome.getWinner().getName();
         System.out.println(winnerName + " wins!");
-
         logger.info("Окончание скачек. Победитель: " + winnerName);
     }
 
